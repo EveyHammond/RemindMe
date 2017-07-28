@@ -12,7 +12,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 
-import top.v4vlviv.evey.remindme.adapter.TabPagesFragmentAdapter;
+import top.v4vlviv.evey.remindme.adapter.TabsFragmentAdapter;
 
 /**
  * Created by Evey on 27.07.2017.
@@ -37,9 +37,6 @@ public class MainActivity extends AppCompatActivity{
         initToolbar();
         initNavigationView();
         initTabs();
-
-
-
     }
 
     private void initToolbar() {
@@ -58,7 +55,7 @@ public class MainActivity extends AppCompatActivity{
 
     private void initTabs() {
         viewPager = (ViewPager) findViewById(R.id.viewPager);
-        TabPagesFragmentAdapter adapter = new TabPagesFragmentAdapter(getSupportFragmentManager());
+        TabsFragmentAdapter adapter = new TabsFragmentAdapter(this, getSupportFragmentManager());
         viewPager.setAdapter(adapter);
 
         tabLayout =(TabLayout) findViewById(R.id.tablayout);
